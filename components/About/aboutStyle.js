@@ -15,5 +15,5 @@ export const Wrapper = styled.div`
 `;
 
 export const Line = styled.div`
-  border: 2px solid #c2cdea;
+  border: 1px solid #c2cdea;
 `;

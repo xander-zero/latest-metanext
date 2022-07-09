@@ -3,9 +3,14 @@ import { CardTitle, CardWrapper } from "./aboutCardStyle";
 
 const Card = ({ title, desc }) => {
   return (
-    <CardWrapper>
+    <CardWrapper className="mb-4">
       <CardTitle>
-        <Typography size="14px" weight="bold" color="#053EFF">
+        <Typography
+          size="14px"
+          weight="bold"
+          color="#053EFF"
+          className="mb-md-2"
+        >
           {title}
         </Typography>
       </CardTitle>

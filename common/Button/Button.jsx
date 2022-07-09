@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const Button = ({ children, bgColor, color, radius }) => {
+const Button = ({ children, bgColor, color, radius, className }) => {
   return (
-    <Btn bgColor={bgColor} color={color} radius={radius}>
+    <Btn bgColor={bgColor} color={color} radius={radius} className={className}>
       {children}
     </Btn>
   );

@@ -1,15 +1,18 @@
 import Image from "next/image";
 import Typography from "../../common/Typography/Typography";
 import { ServiceStyle, WrapperTitle } from "./servicesStyle";
-import quote from "../../public/assets/images/quote.png";
+import aboutTitleImg from "../../public/assets/images/aboutTitleImg.png";
 import ListService from "./ListService/ListService";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Services = () => {
+  const { width } = useWindowSize();
+  console.log(width);
   return (
     <div className="container mt-5">
       <ServiceStyle>
         <WrapperTitle>
-          <Image src={quote} alt="quote" layout="fixed" />
+          <Image src={aboutTitleImg} alt="quote" layout="fixed" />
           <Typography color="#053EFF" weight="bold" size="24px">
             بخش های متانکست
           </Typography>

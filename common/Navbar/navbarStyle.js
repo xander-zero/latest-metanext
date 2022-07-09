@@ -7,6 +7,11 @@ export const Nav = styled.nav`
   height: 70px;
 `;
 
+export const NavbarContainer = styled.div`
+  width: 100%;
+  box-shadow: 0px 7px 25px rgba(5, 62, 255, 0.08);
+`;
+
 export const WrapperLogo = styled.div`
   display: flex;
   justify-content: center;

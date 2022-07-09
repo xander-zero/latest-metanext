@@ -49,5 +49,8 @@ export const HeaderTitle = styled.h2`
 
 export const WrapperText = styled.div`
   width: ${({ width }) => width};
-  margin: ${({ margin }) => `1rem ${margin}`};
+  margin: ${({ margin }) => `5px ${margin}`};
+  @media (max-width: 991px) {
+    width: 100% !important;
+  }
 `;

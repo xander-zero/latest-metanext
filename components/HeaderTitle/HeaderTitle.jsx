@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const HeaderTitle = ({ size, color, children, weight }) => {
+const HeaderTitle = ({ size, color, children, weight, className }) => {
   return (
-    <Text size={size} color={color} weight={weight}>
+    <Text size={size} color={color} weight={weight} className={className}>
       {children}
     </Text>
   );

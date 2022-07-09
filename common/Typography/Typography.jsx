@@ -1,8 +1,21 @@
 import styled from "styled-components";
 
-const Typography = ({ children, size, color, weight, textAlign }) => {
+const Typography = ({
+  children,
+  size,
+  color,
+  weight,
+  textAlign,
+  className,
+}) => {
   return (
-    <Text size={size} color={color} weight={weight} textAlign={textAlign}>
+    <Text
+      size={size}
+      color={color}
+      weight={weight}
+      textAlign={textAlign}
+      className={className}
+    >
       {children}
     </Text>
   );
