@@ -2,8 +2,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +11,32 @@ a {
 
 * {
   box-sizing: border-box;
+}
+@font-face {
+  font-family: IRANSansBold;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../public/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2")
+      format("woff2"),
+    url("../public/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/woff/IRANSansWeb(FaNum)_Bold.woff")
+      format("woff"),
+    url("../public/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/eot/IRANSansWeb(FaNum).eot");
+  src: url("../public/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/eot/IRANSansWeb(FaNum).eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/woff2/IRANSansWeb(FaNum).woff2")
+      format("woff2"),
+    url("../public/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/woff/IRANSansWeb(FaNum).woff")
+      format("woff"),
+    url("../public/assets/fonts/IRANSans/Farsi_numerals/webFonts/fonts/ttf/IRANSansWeb(FaNum).ttf")
+      format("truetype");
 }
