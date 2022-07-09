@@ -6,10 +6,7 @@ import HeaderTitle from "../HeaderTitle/HeaderTitle";
 import ListCard from "./AboutList/ListCard";
 import Typography from "../../common/Typography/Typography";
 
-import { AboutStyle, Line, Wrapper } from "./aboutStyle";
 import { WrapperText } from "../../styles/GlobalStyle";
-
-import quote from "../../public/assets/images/quote.png";
 
 const About = () => {
   const languageSelector = useSelector((state) => state.language);
