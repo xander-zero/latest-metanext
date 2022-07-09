@@ -8,7 +8,6 @@ import crm from "../../../public/assets/images/crm.png";
 import provider from "../../../public/assets/images/provider.png";
 import shop from "../../../public/assets/images/shop.png";
 import chat from "../../../public/assets/images/chat.png";
-<<<<<<< HEAD
 import BluePlayer from "../../../public/assets/images/BluePlayer.png";
 import Rectangle from "../../../public/assets/images/Rectangle.png";
 import useWindowSize from "../../../hooks/useWindowSize";
@@ -66,43 +65,6 @@ const ListService = () => {
         <div>hello</div>
       )}
     </>
-=======
-
-const ListService = ({ languageData }) => {
-  return (
-    <ListServiceStyle>
-      <ServiceCard
-        title={languageData.title_account_service}
-        desc={languageData.desc_account_service}
-        src={account}
-      />
-      <ServiceCard
-        title={languageData.title_all_services}
-        desc={languageData.desc_all_services}
-        src={manage}
-      />
-      <ServiceCard
-        title={languageData.title_crm_service}
-        desc={languageData.desc_crm_service}
-        src={crm}
-      />
-      <ServiceCard
-        title="پنل تأمین کننده"
-        desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز است"
-        src={provider}
-      />
-      <ServiceCard
-        title={languageData.title_shop_service}
-        desc={languageData.desc_shop_service}
-        src={shop}
-      />
-      <ServiceCard
-        title={languageData.title_mangeContent_service}
-        desc={languageData.desc_manageContent_service}
-        src={chat}
-      />
-    </ListServiceStyle>
->>>>>>> d5603aabf3359e2344da17016f0542e389dc7e78
   );
 };
 export default ListService;

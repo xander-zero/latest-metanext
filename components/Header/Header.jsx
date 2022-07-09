@@ -12,9 +12,9 @@ import {
   WrapperImg2,
 } from "./headerStyle";
 import quote from "../../public/assets/images/quote.png";
-import HeaderImg from "../../public/assets/images/HeaderImg.png";
 import headerImg1 from "../../public/assets/images/headerImg1.png";
 import headerImg2 from "../../public/assets/images/headerImg2.png";
+import HeaderImg from "../../public/assets/images/HeaderImg.png";
 import { useSelector } from "react-redux";
 import { Button } from "../../common/Button/Button";
 
@@ -69,7 +69,7 @@ const Header = () => {
         </Right>
         <Left>
           <WrapperCircle>
-            <Image src={circle} alt="circle" layout="fixed" />
+            <Image src={HeaderImg} alt="circle" layout="fixed" />
           </WrapperCircle>
           <WrapperImg>
             <Image src={headerImg1} alt="headerImg1" layout="fixed" />
