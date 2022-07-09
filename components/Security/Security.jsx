@@ -1,33 +1,41 @@
 import Image from "next/image";
 import styled from "styled-components";
-import Typography from "../../common/Typography/Typography";
+import { useSelector } from "react-redux";
+
 import HeaderTitle from "../HeaderTitle/HeaderTitle";
+import Typography from "../../common/Typography/Typography";
+
+import SecurityList from "./SecurityList/SecurityList";
 
 import cardSecurity from "../../public/assets/images/cardSecurity.png";
 import securityImg from "../../public/assets/images/sec.png";
 import point from "../../public/assets/images/point-white.png";
-import SecurityList from "./SecurityList/SecurityList";
 
 const Security = () => {
+  const languageSelector = useSelector((state) => state.language);
+
+  const { languageData } = languageSelector;
+
   return (
     <SecurityStyle image={securityImg}>
       <WrapperTitle>
         <Image src={point} alt="point" layout="fixed" />
         <div className="my-2">
           <HeaderTitle size="24px" color="#fff">
-            امنیت اطلاعات
+            {languageData.title_security}
           </HeaderTitle>
         </div>
         <Typography textAlign="center" size="16px" color="#fff">
-          حفظ و نگهداری اطلاعات شما در برابر حملات <br />
-          سامانه متانکست همواره اطلاعات شما را در سرور اختصاصی خود ذخیره کرده و
-          هیچ ارگان و نهادی به آن دسترسی ندارد
+          {languageData.subTitle_security}
+        </Typography>
+        <Typography textAlign="center" size="16px" color="#fff">
+          {languageData.desc_serurity}
         </Typography>
       </WrapperTitle>
       <div className="container">
         <Wrapper>
           <Right>
-            <SecurityList />
+            <SecurityList languageData={languageData} />
           </Right>
           <Left>
             <Image src={cardSecurity} alt="cardSecurity" layout="fixed" />

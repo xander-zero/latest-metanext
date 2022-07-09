@@ -1,3 +1,5 @@
+import { Provider } from "react-redux";
+import { store } from "../redux/store/store";
 import MainLayout from "../layout/MainLayout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
@@ -8,9 +10,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 function MyApp({ Component, pageProps }) {
   return (
-    <MainLayout>
-      <Component {...pageProps} />
-    </MainLayout>
+    <Provider store={store}>
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+    </Provider>
   );
 }
 

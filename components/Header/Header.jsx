@@ -15,20 +15,20 @@ import quote from "../../public/assets/images/quote.png";
 import circle from "../../public/assets/images/circle.png";
 import headerImg1 from "../../public/assets/images/headerImg1.png";
 import headerImg2 from "../../public/assets/images/headerImg2.png";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const languageSelector = useSelector((state) => state.language);
+  const { languageData } = languageSelector;
+
   return (
     <div className="container">
       <Wrapper>
         <Right>
           <Image src={quote} alt="quote" layout="fixed" />
-          <HeaderTitle size="24px">با ما به آینده سفر کنید</HeaderTitle>
+          <HeaderTitle size="24px">{languageData.title_header}</HeaderTitle>
           <WrapperText width="75%">
-            <Typography>
-              متا نکست، جامع ترین سیستم یکپارچه مدیریت کسب و کار آنلاین می باشد
-              که برای اولین بار در ایران و به منظور مدیریت یکپارچه کسب و کارهای
-              کلان آنلاین ساخته شده است.
-            </Typography>
+            <Typography>{languageData.desc_header}</Typography>
           </WrapperText>
         </Right>
         <Left>

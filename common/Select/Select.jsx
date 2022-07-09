@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const Select = ({ items }) => {
+const Select = ({ items, onChange, value }) => {
   return (
-    <SelectStyle>
+    <SelectStyle value={value} onChange={onChange}>
       {items?.map((item) => (
         <Option key={item.id} value={item.value}>
           {item.label}

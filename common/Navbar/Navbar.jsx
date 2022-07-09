@@ -11,6 +11,8 @@ import {
 import timebar from "../../public/assets/images/timebar.png";
 import Select from "../Select/Select";
 import Button from "../Button/Button";
+import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const languages = [
@@ -31,6 +33,19 @@ const Navbar = () => {
     },
   ];
 
+  const router = useRouter();
+  const type = router.locale;
+  const onChange = (event) => {
+    const lng = event.target.value;
+    router.push("/", "/", { locale: lng });
+  };
+
+  const languageSelector = useSelector((state) => state.language);
+
+  const { languageData } = languageSelector;
+
+  console.log(languageSelector);
+
   return (
     <div className="container">
       <Nav>
@@ -42,29 +57,53 @@ const Navbar = () => {
           <MenuList>
             <ListItem>
               <Image src={timebar} alt="timebar" layout="fixed" />
-              <Link href="/">درباره ما</Link>
+              <Link href="/">
+                {languageData.menu_item_about
+                  ? languageData.menu_item_about
+                  : ""}
+              </Link>
             </ListItem>
             <ListItem>
-              <Link href="/">امکانات</Link>
+              <Link href="/">
+                {languageData.menu_item_service
+                  ? languageData.menu_item_service
+                  : ""}
+              </Link>
             </ListItem>
             <ListItem>
-              <Link href="/">ویژگی ها</Link>
+              <Link href="/">
+                {languageData.menu_item_features
+                  ? languageData.menu_item_features
+                  : ""}
+              </Link>
             </ListItem>
             <ListItem>
-              <Link href="/">نظرات مشتریان</Link>
+              <Link href="/">
+                {languageData.menu_item_comment
+                  ? languageData.menu_item_comment
+                  : ""}
+              </Link>
             </ListItem>
           </MenuList>
         </WrapperLogo>
         <WrapperButton>
-          <Select items={languages} />
+          <Select items={languages} onChange={onChange} value={type} />
           <div className="mx-1">
             <Button radius="true" bgColor="#053EFF" color="#fff">
-              دریافت مشاوره
+              <Link href="/contact">
+                {languageData.menu_item_contact
+                  ? languageData.menu_item_contact
+                  : ""}
+              </Link>
             </Button>
           </div>
           <div className="mx-1">
             <Button radius="true" bgColor="#fff" color="#053EFF">
-              ورود یا ثبت نام
+              <Link href="/login">
+                {languageData.login_label_button
+                  ? languageData.login_label_button
+                  : ""}
+              </Link>
             </Button>
           </div>
         </WrapperButton>
