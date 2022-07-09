@@ -1,15 +1,23 @@
 import Image from "next/image";
 import { AboutStyle, Line, Wrapper } from "./aboutStyle";
+import { useSelector } from "react-redux";
 import aboutTitleImg from "../../public/assets/images/aboutTitleImg.png";
 import HeaderTitle from "../HeaderTitle/HeaderTitle";
-import Typography from "../../common/Typography/Typography";
-import { WrapperText } from "../../styles/GlobalStyle";
 import ListCard from "./AboutList/ListCard";
+import Typography from "../../common/Typography/Typography";
+
+import { AboutStyle, Line, Wrapper } from "./aboutStyle";
+import { WrapperText } from "../../styles/GlobalStyle";
+
+import quote from "../../public/assets/images/quote.png";
 
 const About = () => {
+  const languageSelector = useSelector((state) => state.language);
+  const { languageData } = languageSelector;
+
   return (
     <div className="wrapper w-100" style={{ background: "#F2F6FF" }}>
-      <div className="container pt-5 pb-2">
+      <div className="container  pt-5 pb-2">
         <AboutStyle>
           <Wrapper>
             <Image
@@ -18,13 +26,18 @@ const About = () => {
               layout="fixed"
               className="mb-2"
             />
-            <HeaderTitle size="24px" className="mt-2">
-              درباره متانکست
-            </HeaderTitle>
+            <HeaderTitle size="24px">{languageData.title_about}</HeaderTitle>
             <div className="my-3">
               <Typography size="16px" weight="bold" color="#000">
-                همیشه یک گام جلوتر از دیگران باشید
+                {languageData.subTitle_about}
               </Typography>
+            </div>
+            <div className="mb-5 mx-auto">
+              <WrapperText width="70%" margin="auto">
+                <Typography size="15px" textAlign="center">
+                  {languageData.desc_goal_about}
+                </Typography>
+              </WrapperText>
             </div>
             <div className="mb-5">
               <WrapperText width="100%" margin="auto">

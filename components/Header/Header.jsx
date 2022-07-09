@@ -15,9 +15,13 @@ import quote from "../../public/assets/images/quote.png";
 import HeaderImg from "../../public/assets/images/HeaderImg.png";
 import headerImg1 from "../../public/assets/images/headerImg1.png";
 import headerImg2 from "../../public/assets/images/headerImg2.png";
-import Button from "../../common/Button/Button";
+import { useSelector } from "react-redux";
+import { Button } from "../../common/Button/Button";
 
 const Header = () => {
+  const languageSelector = useSelector((state) => state.language);
+  const { languageData } = languageSelector;
+
   return (
     <div className="container">
       <Wrapper>
@@ -56,6 +60,24 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <Right>
+          <Image src={quote} alt="quote" layout="fixed" />
+          <HeaderTitle size="24px">{languageData.title_header}</HeaderTitle>
+          <WrapperText width="75%">
+            <Typography>{languageData.desc_header}</Typography>
+          </WrapperText>
+        </Right>
+        <Left>
+          <WrapperCircle>
+            <Image src={circle} alt="circle" layout="fixed" />
+          </WrapperCircle>
+          <WrapperImg>
+            <Image src={headerImg1} alt="headerImg1" layout="fixed" />
+          </WrapperImg>
+          <WrapperImg2>
+            <Image src={headerImg2} alt="headerImg2" layout="fixed" />
+          </WrapperImg2>
+        </Left>
       </Wrapper>
     </div>
   );

@@ -13,7 +13,9 @@ export const CardImg = styled.div`
 `;
 
 export const CardTitle = styled.div`
-  margin: 2rem; ;
+  margin: 2rem;
+  width: 100%;
+  text-align: center;
 `;
 
 export const CardDesc = styled.div``;

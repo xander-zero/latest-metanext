@@ -1,6 +1,10 @@
 import Image from "next/image";
-import HeaderTitle from "../../components/HeaderTitle/HeaderTitle";
+import { useSelector } from "react-redux";
+
 import Typography from "../Typography/Typography";
+import HeaderTitle from "../../components/HeaderTitle/HeaderTitle";
+
+import { WrapperText } from "../../styles/GlobalStyle";
 import {
   FooterStyle,
   Icon,
@@ -11,7 +15,7 @@ import {
   SocilaMedia,
   WrapperIcon,
 } from "./footerStyle";
-import { WrapperText } from "../../styles/GlobalStyle";
+
 import linkdin from "../../public/assets/images/linkdin.png";
 import telegram from "../../public/assets/images/telegram.png";
 import instagram from "../../public/assets/images/instagram.png";
@@ -20,6 +24,9 @@ import location from "../../public/assets/images/location.png";
 import email from "../../public/assets/images/email.png";
 
 const Footer = () => {
+  const languageSelector = useSelector((state) => state.language);
+  const { languageData } = languageSelector;
+
   return (
     <FooterStyle>
       <div className="container d-flex">
@@ -30,12 +37,7 @@ const Footer = () => {
           <div className="my-5">
             <WrapperText width="80%">
               <Typography size="15px" color="#000">
-                هدف متا نکست یکپارچه سازی فرایندها، سیستم ها و سرویسهای
-                الکترونیکی مرتبط با کسب و کار می باشد. از آنجا که پراکندگی نرم
-                افزارهای مورد استفاده در کسب و کارها باعث عقب افتادگی و کندی
-                فعالیت می شود، سامانه آنلاین متا نکست با یکپارچه سازی تمامی
-                فرایندها، علاوه بر سرعت و بهبود کارکرد، باعث توسعه سریع و مدیریت
-                یکپارچه کسب و کارهای خرد، متوسط و کلان می شود.
+                {languageData.desc_goal_about}
               </Typography>
             </WrapperText>
           </div>
@@ -53,29 +55,39 @@ const Footer = () => {
         </Right>
         <Left>
           <Typography size="16px" color="#053EFF" weight="bold">
-            راه های ارتباطی
+            {languageData.contact_subTitle}
           </Typography>
           <List>
             <ListItem>
-              <Typography size="13px">تلفن تماس</Typography>
+              <Typography size="13px">
+                {languageData.title_phonenumber_footer}
+              </Typography>
               <WrapperIcon>
                 <Image src={phone} alt="phone number" layout="fixed" />
                 <div className="mx-2">
-                  <Typography size="13px">051-1234567</Typography>
+                  <Typography size="13px" en>
+                    051-1234567
+                  </Typography>
                 </div>
               </WrapperIcon>
             </ListItem>
             <ListItem>
-              <Typography size="13px">آدرس شرکت</Typography>
+              <Typography size="13px">
+                {languageData.address_company}
+              </Typography>
               <WrapperIcon>
                 <Image src={location} alt="phone number" layout="fixed" />
                 <div className="mx-2">
-                  <Typography size="13px">ایران ،خراسان رضوی ، مشهد</Typography>
+                  <Typography size="13px">
+                    {languageData.address_company_desc}
+                  </Typography>
                 </div>
               </WrapperIcon>
             </ListItem>
             <ListItem>
-              <Typography size="13px">آدرس ایمیل</Typography>
+              <Typography size="13px">
+                {languageData.title_email_footer}
+              </Typography>
               <WrapperIcon>
                 <Image src={email} alt="phone number" layout="fixed" />
                 <div className="mx-2">

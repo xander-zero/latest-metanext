@@ -7,7 +7,7 @@ export const Card = styled.div`
   background-color: #fff;
   box-shadow: 0px 7px 25px rgba(5, 62, 255, 0.08);
   border-radius: 10px;
-  width: 265px;
+  width: 300px;
 `;
 export const CardImg = styled.div`
   display: flex;

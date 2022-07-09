@@ -4,7 +4,7 @@ import { Wrapper } from "./commentListStyle";
 import CommentCard from "./CommentCard/CommentCard";
 import comment from "../../../public/assets/images/comment.png";
 
-const CommentList = () => {
+const CommentList = ({ languageData }) => {
   const products = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
@@ -39,9 +39,9 @@ const CommentList = () => {
           <SwiperSlide key={index}>
             <CommentCard
               src={comment}
-              title="علی حسینی"
-              subTitle="طراح رابط کاربری"
-              desc="متا نکست، جامع ترین سیستم یکپارچه مدیریت کسب و کار می باشد که برای اولین بار در ایران و به منظور مدیریت یکپارچه کسب و کارهای کلان ساخته شده است. این سامانه شامل: فروشگاه "
+              title={languageData.comment_person_name_1}
+              subTitle={languageData.comment_person_job_1}
+              desc={languageData.comment_person_desc_2}
             />
           </SwiperSlide>
         ))}

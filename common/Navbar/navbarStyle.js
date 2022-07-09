@@ -32,8 +32,12 @@ export const ListItem = styled.li`
   justify-content: center;
   padding: 0 1.5rem;
   border-left: 1px dashed ${({ theme }) => theme.color_primary};
+  border-right: 1px dashed ${({ theme }) => theme.color_primary};
 
   &:nth-child(4) {
+    border: none;
+  }
+  &:nth-child(1) {
     border: none;
   }
 

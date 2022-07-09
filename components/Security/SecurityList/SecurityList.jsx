@@ -2,28 +2,28 @@ import styled from "styled-components";
 import SecurityCard from "./SecurityCard/SecurityCard";
 import tik from "../../../public/assets/images/tik.png";
 
-const SecurityList = () => {
+const SecurityList = ({ languageData }) => {
   return (
     <SecurityListStyle>
       <SecurityCard
         src={tik}
-        title="هوشمندسازی در نگهداری اطلاعات"
-        desc="سامانه متانکست برای هوشمندسازی یک کلید یکتا می سازد و فقط هر مشتری به اطلاعات خود دسترسی دارد و هیچ کاربر دیگری به اطلاعات شما دسترسی ندارد."
+        title={languageData.title_smart_security}
+        desc={languageData.desc_smart_security}
       />
       <SecurityCard
         src={tik}
-        title="هوشمندسازی در نگهداری اطلاعات"
-        desc="سامانه متانکست برای هوشمندسازی یک کلید یکتا می سازد و فقط هر مشتری به اطلاعات خود دسترسی دارد و هیچ کاربر دیگری به اطلاعات شما دسترسی ندارد."
+        title={languageData.title_encrypt_security}
+        desc={languageData.desc_encrypt_security}
       />
       <SecurityCard
         src={tik}
-        title="هوشمندسازی در نگهداری اطلاعات"
-        desc="سامانه متانکست برای هوشمندسازی یک کلید یکتا می سازد و فقط هر مشتری به اطلاعات خود دسترسی دارد و هیچ کاربر دیگری به اطلاعات شما دسترسی ندارد."
+        title={languageData.title_backup_security}
+        desc={languageData.desc_backup_security}
       />
       <SecurityCard
         src={tik}
-        title="هوشمندسازی در نگهداری اطلاعات"
-        desc="سامانه متانکست برای هوشمندسازی یک کلید یکتا می سازد و فقط هر مشتری به اطلاعات خود دسترسی دارد و هیچ کاربر دیگری به اطلاعات شما دسترسی ندارد."
+        title={languageData.title_xander_security}
+        desc={languageData.desc_xander_security}
       />
     </SecurityListStyle>
   );

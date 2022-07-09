@@ -6,6 +6,7 @@ const Typography = ({
   color,
   weight,
   textAlign,
+  en,
   className,
 }) => {
   return (
@@ -14,6 +15,7 @@ const Typography = ({
       color={color}
       weight={weight}
       textAlign={textAlign}
+      en={en}
       className={className}
     >
       {children}
@@ -27,6 +29,7 @@ const Text = styled.p`
   font-weight: ${({ weight }) => (weight ? weight : "")};
   line-height: 35px;
   text-align: ${({ textAlign }) => textAlign};
+  font-family: ${({ en }) => (en ? "sans-serif" : "")};
 `;
 
 export default Typography;
